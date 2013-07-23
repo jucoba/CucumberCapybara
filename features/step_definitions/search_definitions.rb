@@ -4,9 +4,10 @@ end
 
 When /^I searc "(.*?)"$/ do |arg1|
   fill_in('q', :with => "Agile Manifesto")
-  click_button("Buscar con Google")
+  #puts page
+  #click_button("btnG")
 end
 
 Then /^I should see a link to "(.*?)"$/ do |url|
-  page.should have_selector("a", :text => url)
+  page.should have_content("Manifesto for Agile Software Development")
 end
